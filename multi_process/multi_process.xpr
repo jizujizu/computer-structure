@@ -3,7 +3,7 @@
 <!--                                                         -->
 <!-- Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.   -->
 
-<Project Version="7" Minor="10" Path="C:/Users/12599/Documents/GitHub/computer-structure/multi_process/multi_process.xpr">
+<Project Version="7" Minor="10" Path="C:/Users/12599/Documents/GitHub/jizujizu/computer-structure/multi_process/multi_process.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
     <Option Name="Id" Val="ab2e95acfe044d819c0e05944d0ff460"/>
@@ -45,6 +45,15 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
+      <File Path="$PSRCDIR/sources_1/imports/minisys2.0/control32.v">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="D:/大学课程/上学期/大二下/计算机组成与体系结构-小学期/最后提交/提交/提交/final_1/minisys.srcs/sources_1/imports/minisys2.0/control32.v"/>
+          <Attr Name="ImportTime" Val="1562971986"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
       <File Path="$PSRCDIR/sources_1/imports/minisys2.0/switchs.v">
         <FileInfo>
           <Attr Name="ImportPath" Val="D:/大学课程/上学期/大二下/计算机组成与体系结构-小学期/最后提交/提交/提交/final_1/minisys.srcs/sources_1/imports/minisys2.0/switchs.v"/>
@@ -58,15 +67,6 @@
         <FileInfo>
           <Attr Name="ImportPath" Val="D:/大学课程/上学期/大二下/计算机组成与体系结构-小学期/最后提交/提交/提交/final_1/minisys.srcs/sources_1/imports/minisys2.0/leds.v"/>
           <Attr Name="ImportTime" Val="1517212939"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PSRCDIR/sources_1/imports/minisys2.0/control32.v">
-        <FileInfo>
-          <Attr Name="ImportPath" Val="D:/大学课程/上学期/大二下/计算机组成与体系结构-小学期/最后提交/提交/提交/final_1/minisys.srcs/sources_1/imports/minisys2.0/control32.v"/>
-          <Attr Name="ImportTime" Val="1562971986"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
@@ -173,6 +173,7 @@
       </Config>
     </FileSet>
     <FileSet Name="sim_1" Type="SimulationSrcs" RelSrcDir="$PSRCDIR/sim_1">
+      <Filter Type="Srcs"/>
       <Config>
         <Option Name="DesignMode" Val="RTL"/>
         <Option Name="TopModule" Val="minisys"/>
@@ -209,17 +210,13 @@
   <Runs Version="1" Minor="10">
     <Run Id="synth_1" Type="Ft3:Synth" SrcSet="sources_1" Part="xc7a100tfgg484-1" ConstrsSet="constrs_1" Description="Vivado Synthesis Defaults" State="current" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2015">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2015"/>
         <Step Id="synth_design"/>
       </Strategy>
     </Run>
     <Run Id="impl_1" Type="Ft2:EntireDesign" Part="xc7a100tfgg484-1" ConstrsSet="constrs_1" Description="Vivado Implementation Defaults" State="current" SynthRun="synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2015">
-          <Desc>Vivado Implementation Defaults</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2015"/>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>
