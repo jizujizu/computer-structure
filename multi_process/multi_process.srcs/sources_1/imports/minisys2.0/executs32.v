@@ -2,8 +2,8 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 module Executs32(Read_data_1,Read_data_2,Sign_extend,Function_opcode,Exe_opcode,ALUOp,
-                 Shamt,ALUSrc,I_format,Zero,Jrn,Sftmd,ALU_Result,Add_Result,PC_plus_4
-                 );
+                 Shamt,ALUSrc,I_format,Zero,Jrn,Sftmd,ALU_Result,Add_Result,PC_plus_4,
+                 clock, reset, Waluresult);
     input[31:0]  Read_data_1;		// 从译码单元的Read_data_1中来
     input[31:0]  Read_data_2;		// 从译码单元的Read_data_2中来
     input[31:0]  Sign_extend;		// 从译码单元来的扩展后的立即数
@@ -34,6 +34,30 @@ module Executs32(Read_data_1,Read_data_2,Sign_extend,Function_opcode,Exe_opcode,
     wire Sftmd;
     reg s;
     
+    // multi process begin
+    
+    
+    input clock,reset;
+    input Waluresult; //写 Aluresult 的信号
+    
+    always@(negedge clock or posedge reset) begin 
+        if(reset) begin 
+            ALU_Result=32'h0;
+        end else if(Waluresult) begin 
+            if(((ALU_ctl==3'b111) && (Exe_code[3]==1))||((ALU_ctl[2:1]==2'b11) && (I_format==1))) //slti(sub)  处理所有SLT类的问题
+                ALU_Result = {30'b000000000000000000000000000000,ALU_output_mux[31]};//D31=1 IS neg (LESS)
+            else if((ALU_ctl==3'b101) && (I_format==1)) ALU_Result[31:0] = {Binput[15:0],16'b0000000000000000};//lui data
+            else if(Sftmd==1) ALU_Result = Sinput; 
+            else  ALU_Result = ALU_output_mux[31:0]; //otherwise
+        end 
+    end
+    
+    
+    // multi process end
+    
+    
+    
+    
     assign Sftm = Function_opcode[2:0];   // 实际有用的只有低三位(移位指令）
     assign Exe_code = (I_format==0) ? Function_opcode : {3'b000,Exe_opcode[2:0]};
     assign Ainput = Read_data_1;
@@ -57,13 +81,13 @@ module Executs32(Read_data_1,Read_data_2,Sign_extend,Function_opcode,Exe_opcode,
        else Sinput = Binput;
     end
  
-    always @* begin
-        if(((ALU_ctl==3'b111) && (Exe_code[3]==1))||((ALU_ctl[2:1]==2'b11) && (I_format==1))) //slti(sub)  处理所有SLT类的问题
-            ALU_Result = {30'b000000000000000000000000000000,ALU_output_mux[31]};//D31=1 IS neg (LESS)
-        else if((ALU_ctl==3'b101) && (I_format==1)) ALU_Result[31:0] = {Binput[15:0],16'b0000000000000000};//lui data
-        else if(Sftmd==1) ALU_Result = Sinput; 
-        else  ALU_Result = ALU_output_mux[31:0]; //otherwise
-    end
+//    always @* begin
+//        if(((ALU_ctl==3'b111) && (Exe_code[3]==1))||((ALU_ctl[2:1]==2'b11) && (I_format==1))) //slti(sub)  处理所有SLT类的问题
+//            ALU_Result = {30'b000000000000000000000000000000,ALU_output_mux[31]};//D31=1 IS neg (LESS)
+//        else if((ALU_ctl==3'b101) && (I_format==1)) ALU_Result[31:0] = {Binput[15:0],16'b0000000000000000};//lui data
+//        else if(Sftmd==1) ALU_Result = Sinput; 
+//        else  ALU_Result = ALU_output_mux[31:0]; //otherwise
+//    end
  
     assign Branch_Add = PC_plus_4[31:2] + Sign_extend[31:0];
     assign Add_Result = Branch_Add[31:0];   //算出的下一个PC值已经做了除4处理，所以不需左移16位
