@@ -45,6 +45,15 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
+      <File Path="$PSRCDIR/sources_1/imports/minisys2.0/ifetc32.v">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="D:/大学课程/上学期/大二下/计算机组成与体系结构-小学期/最后提交/提交/提交/final_1/minisys.srcs/sources_1/imports/minisys2.0/ifetc32.v"/>
+          <Attr Name="ImportTime" Val="1562975030"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
       <File Path="$PSRCDIR/sources_1/imports/minisys2.0/control32.v">
         <FileInfo>
           <Attr Name="ImportPath" Val="D:/大学课程/上学期/大二下/计算机组成与体系结构-小学期/最后提交/提交/提交/final_1/minisys.srcs/sources_1/imports/minisys2.0/control32.v"/>
@@ -85,15 +94,6 @@
         <FileInfo>
           <Attr Name="ImportPath" Val="D:/大学课程/上学期/大二下/计算机组成与体系结构-小学期/最后提交/提交/提交/final_1/minisys.srcs/sources_1/imports/minisys2.0/dmemory32.v"/>
           <Attr Name="ImportTime" Val="1517213054"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PSRCDIR/sources_1/imports/minisys2.0/ifetc32.v">
-        <FileInfo>
-          <Attr Name="ImportPath" Val="D:/大学课程/上学期/大二下/计算机组成与体系结构-小学期/最后提交/提交/提交/final_1/minisys.srcs/sources_1/imports/minisys2.0/ifetc32.v"/>
-          <Attr Name="ImportTime" Val="1562975030"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
