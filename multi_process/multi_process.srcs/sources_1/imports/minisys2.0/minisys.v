@@ -1,7 +1,6 @@
 `timescale 1ns / 1ps
 //////////////////////////////////////////////////////////////////////////////////
 module minisys(rst,clk,rr,cc,led2N4,switch2N4
-,beep2N1,music,digital_data,digital_select
 );//instruction,branch,nbranch,jmp,jal,jrn,zero
     input rst;               //板上的Reset信号，低电平复位
     input clk;               //板上的100MHz时钟信号
@@ -46,6 +45,15 @@ module minisys(rst,clk,rr,cc,led2N4,switch2N4
     wire[15:0] ioread_data_switch;
     wire[15:0] yy;
     
+    
+    // multi process begin
+    
+    wire[1:0] wpc;
+    wire wir;
+    wire Waluresult;
+    
+    // multi process end
+    
     cpuclk cpuclk(
         .clk_in1(clk),    //100MHz
         .clk_out1(clock)    //cpuclock
@@ -66,7 +74,9 @@ module minisys(rst,clk,rr,cc,led2N4,switch2N4
         //output
         .Instruction(instruction),  // 输出指令到其他模块
         .PC_plus_4_out(pc_plus_4),  // (pc+4)送执行单元        
-        .opcplus4(opcplus4)         // JAL指令专用的PC+4
+        .opcplus4(opcplus4),         // JAL指令专用的PC+4
+        .Wpc(wpc),
+        .Wir(wir)
     );
 
     Idecode32 idecode(
@@ -108,7 +118,13 @@ module minisys(rst,clk,rr,cc,led2N4,switch2N4
         .Jal(jal),              //  为1表明是Jal指令
         .I_format(i_format),    //  为1表明该指令是除beq，bne，LW，SW之外的其他I-类型指令
         .Sftmd(sftmd),          //  为1表明是移位指令
-        .ALUOp(aluop)           //  是R-类型或I_format=1时位1为1, beq、bne指令则位0为1
+        .ALUOp(aluop),           //  是R-类型或I_format=1时位1为1, beq、bne指令则位0为1
+        .clock(clock),
+        .reset(rst),
+        .zero(zero),
+        .Wpc(wpc),
+        .Wir(wir),
+        .Waluresult(Waluresult)
     );
 
     Executs32 execute(
@@ -128,7 +144,10 @@ module minisys(rst,clk,rr,cc,led2N4,switch2N4
         //output
         .Zero(zero),            // 为1表明计算值为0         
         .ALU_Result(alu_result), // 计算的数据结果
-        .Add_Result(add_result)// 计算的地址结果            
+        .Add_Result(add_result),// 计算的地址结果      
+        .clock(clock),
+        .reset(rst),
+        .Waluresult(Waluresult)      
      );
 
     dmemory32 memory(
