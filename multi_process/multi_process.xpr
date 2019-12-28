@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Product Version: Vivado v2015.4 (64-bit)              -->
+<!--                                                         -->
+<!-- Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.   -->
+
+<Project Version="7" Minor="10" Path="C:/Users/12599/Documents/GitHub/computer-structure/multi_process/multi_process.xpr">
+  <DefaultLaunch Dir="$PRUNDIR"/>
+  <Configuration>
+    <Option Name="Id" Val="ab2e95acfe044d819c0e05944d0ff460"/>
+    <Option Name="Part" Val="xc7a100tfgg484-1"/>
+    <Option Name="CompiledLibDir" Val="$PCACHEDIR/compile_simlib"/>
+    <Option Name="CompiledLibDirModelSim" Val="$PCACHEDIR/compile_simlib/modelsim"/>
+    <Option Name="CompiledLibDirQuesta" Val="$PCACHEDIR/compile_simlib/questa"/>
+    <Option Name="CompiledLibDirIES" Val="$PCACHEDIR/compile_simlib/ies"/>
+    <Option Name="CompiledLibDirVCS" Val="$PCACHEDIR/compile_simlib/vcs"/>
+    <Option Name="CompiledLibDirRiviera" Val="$PCACHEDIR/compile_simlib/riviera"/>
+    <Option Name="CompiledLibDirActivehdl" Val="$PCACHEDIR/compile_simlib/activehdl"/>
+    <Option Name="BoardPart" Val=""/>
+    <Option Name="ActiveSimSet" Val="sim_1"/>
+    <Option Name="DefaultLib" Val="xil_defaultlib"/>
+    <Option Name="EnableCoreContainer" Val="FALSE"/>
+    <Option Name="CreateRefXciForCoreContainers" Val="FALSE"/>
+    <Option Name="IPUserFilesDir" Val="$PPRDIR/multi_process.ip_user_files"/>
+    <Option Name="IPStaticSourceDir" Val="$PPRDIR/multi_process.ip_user_files/ipstatic"/>
+    <Option Name="EnableBDX" Val="FALSE"/>
+  </Configuration>
+  <FileSets Version="1" Minor="31">
+    <FileSet Name="sources_1" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
+      <Filter Type="Srcs"/>
+      <File Path="$PSRCDIR/sources_1/ip/prgrom/prgrom.xci">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="D:/大学课程/上学期/大二下/计算机组成与体系结构-小学期/最后提交/提交/提交/final_1/minisys.srcs/sources_1/ip/prgrom/prgrom.xci"/>
+          <Attr Name="ImportTime" Val="1563299577"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/ip/ram/ram.xci">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="D:/大学课程/上学期/大二下/计算机组成与体系结构-小学期/最后提交/提交/提交/final_1/minisys.srcs/sources_1/ip/ram/ram.xci"/>
+          <Attr Name="ImportTime" Val="1563299722"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/minisys2.0/switchs.v">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="D:/大学课程/上学期/大二下/计算机组成与体系结构-小学期/最后提交/提交/提交/final_1/minisys.srcs/sources_1/imports/minisys2.0/switchs.v"/>
+          <Attr Name="ImportTime" Val="1563301406"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/minisys2.0/leds.v">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="D:/大学课程/上学期/大二下/计算机组成与体系结构-小学期/最后提交/提交/提交/final_1/minisys.srcs/sources_1/imports/minisys2.0/leds.v"/>
+          <Attr Name="ImportTime" Val="1517212939"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/minisys2.0/control32.v">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="D:/大学课程/上学期/大二下/计算机组成与体系结构-小学期/最后提交/提交/提交/final_1/minisys.srcs/sources_1/imports/minisys2.0/control32.v"/>
+          <Attr Name="ImportTime" Val="1562971986"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/minisys2.0/memorio.v">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="D:/大学课程/上学期/大二下/计算机组成与体系结构-小学期/最后提交/提交/提交/final_1/minisys.srcs/sources_1/imports/minisys2.0/memorio.v"/>
+          <Attr Name="ImportTime" Val="1563264980"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/minisys2.0/dmemory32.v">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="D:/大学课程/上学期/大二下/计算机组成与体系结构-小学期/最后提交/提交/提交/final_1/minisys.srcs/sources_1/imports/minisys2.0/dmemory32.v"/>
+          <Attr Name="ImportTime" Val="1517213054"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/minisys2.0/ifetc32.v">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="D:/大学课程/上学期/大二下/计算机组成与体系结构-小学期/最后提交/提交/提交/final_1/minisys.srcs/sources_1/imports/minisys2.0/ifetc32.v"/>
+          <Attr Name="ImportTime" Val="1562975030"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/minisys2.0/idecode32.v">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="D:/大学课程/上学期/大二下/计算机组成与体系结构-小学期/最后提交/提交/提交/final_1/minisys.srcs/sources_1/imports/minisys2.0/idecode32.v"/>
+          <Attr Name="ImportTime" Val="1517212938"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/minisys2.0/executs32.v">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="D:/大学课程/上学期/大二下/计算机组成与体系结构-小学期/最后提交/提交/提交/final_1/minisys.srcs/sources_1/imports/minisys2.0/executs32.v"/>
+          <Attr Name="ImportTime" Val="1563203172"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/minisys2.0/ioread.v">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="D:/大学课程/上学期/大二下/计算机组成与体系结构-小学期/最后提交/提交/提交/final_1/minisys.srcs/sources_1/imports/minisys2.0/ioread.v"/>
+          <Attr Name="ImportTime" Val="1563349744"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/ip/cpuclk/cpuclk.xci">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="D:/大学课程/上学期/大二下/计算机组成与体系结构-小学期/最后提交/提交/提交/final_1/minisys.srcs/sources_1/ip/cpuclk/cpuclk.xci"/>
+          <Attr Name="ImportTime" Val="1562827179"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/minisys2.0/minisys.v">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="D:/大学课程/上学期/大二下/计算机组成与体系结构-小学期/最后提交/提交/提交/final_1/minisys.srcs/sources_1/imports/minisys2.0/minisys.v"/>
+          <Attr Name="ImportTime" Val="1563474841"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/ip/prgrom/prgmip32.coe">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="d:/大学课程/上学期/大二下/计算机组成与体系结构-小学期/最后提交/提交/提交/final_1/minisys.srcs/sources_1/ip/prgrom/prgmip32.coe"/>
+          <Attr Name="ImportTime" Val="1563379492"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/ip/ram/dmem32.coe">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="d:/大学课程/上学期/大二下/计算机组成与体系结构-小学期/最后提交/提交/提交/final_1/minisys.srcs/sources_1/ip/ram/dmem32.coe"/>
+          <Attr Name="ImportTime" Val="1563379492"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <Config>
+        <Option Name="DesignMode" Val="RTL"/>
+        <Option Name="TopModule" Val="minisys"/>
+        <Option Name="TopAutoSet" Val="TRUE"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="constrs_1" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
+      <Filter Type="Constrs"/>
+      <Config>
+        <Option Name="ConstrsType" Val="XDC"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="sim_1" Type="SimulationSrcs" RelSrcDir="$PSRCDIR/sim_1">
+      <Config>
+        <Option Name="DesignMode" Val="RTL"/>
+        <Option Name="TopModule" Val="minisys"/>
+        <Option Name="TopLib" Val="xil_defaultlib"/>
+        <Option Name="TopAutoSet" Val="TRUE"/>
+        <Option Name="SrcSet" Val="sources_1"/>
+      </Config>
+    </FileSet>
+  </FileSets>
+  <Simulators>
+    <Simulator Name="XSim">
+      <Option Name="Description" Val="Vivado Simulator"/>
+      <Option Name="CompiledLib" Val="0"/>
+    </Simulator>
+    <Simulator Name="ModelSim">
+      <Option Name="Description" Val="ModelSim Simulator"/>
+    </Simulator>
+    <Simulator Name="Questa">
+      <Option Name="Description" Val="Questa Advanced Simulator"/>
+    </Simulator>
+    <Simulator Name="IES">
+      <Option Name="Description" Val="Incisive Enterprise Simulator (IES)"/>
+    </Simulator>
+    <Simulator Name="VCS">
+      <Option Name="Description" Val="Verilog Compiler Simulator (VCS)"/>
+    </Simulator>
+    <Simulator Name="Riviera">
+      <Option Name="Description" Val="Riviera-PRO Simulator"/>
+    </Simulator>
+    <Simulator Name="ActiveHDL">
+      <Option Name="Description" Val="Active-HDL Simulator"/>
+    </Simulator>
+  </Simulators>
+  <Runs Version="1" Minor="10">
+    <Run Id="synth_1" Type="Ft3:Synth" SrcSet="sources_1" Part="xc7a100tfgg484-1" ConstrsSet="constrs_1" Description="Vivado Synthesis Defaults" State="current" IncludeInArchive="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2015">
+          <Desc>Vivado Synthesis Defaults</Desc>
+        </StratHandle>
+        <Step Id="synth_design"/>
+      </Strategy>
+    </Run>
+    <Run Id="impl_1" Type="Ft2:EntireDesign" Part="xc7a100tfgg484-1" ConstrsSet="constrs_1" Description="Vivado Implementation Defaults" State="current" SynthRun="synth_1" IncludeInArchive="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2015">
+          <Desc>Vivado Implementation Defaults</Desc>
+        </StratHandle>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+    </Run>
+  </Runs>
+</Project>

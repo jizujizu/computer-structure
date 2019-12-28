@@ -1,0 +1,4 @@
+Language File-Name         IP      Library         File-Path                                                          
+Verilog, cpuclk_clk_wiz.v, cpuclk, xil_defaultlib, ../../../../multi_process.srcs/sources_1/ip/cpuclk/cpuclk_clk_wiz.v
+Verilog, cpuclk.v,         cpuclk, xil_defaultlib, ../../../../multi_process.srcs/sources_1/ip/cpuclk/cpuclk.v        
+Verilog, glbl.v,           *,      xil_defaultlib, glbl.v                                                             
