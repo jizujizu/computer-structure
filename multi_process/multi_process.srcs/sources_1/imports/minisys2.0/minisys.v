@@ -1,6 +1,6 @@
 `timescale 1ns / 1ps
 //////////////////////////////////////////////////////////////////////////////////
-module minisys(rst,clk,rr,cc,led2N4,switch2N4
+module minisys(rst,clk,led2N4,switch2N4
 );//instruction,branch,nbranch,jmp,jal,jrn,zero
     input rst;               //板上的Reset信号，低电平复位
     input clk;               //板上的100MHz时钟信号
@@ -65,12 +65,12 @@ module minisys(rst,clk,rr,cc,led2N4,switch2N4
         .reset(rst),   //复位信号
         .Add_result(add_result),    // 来自执行单元,算出的跳转地址
         .Read_data_1(read_data_1),  // 来自译码单元，jr指令用的地址
-        .Branch(branch),        // 来自控制单元
-        .nBranch(nbranch),      // 来自控制单元
+        //.Branch(branch),        // 来自控制单元
+        //.nBranch(nbranch),      // 来自控制单元
         .Jmp(jmp),              // 来自控制单元
         .Jal(jal),              // 来自控制单元
-        .Jrn(jrn),              // 来自控制单元
-        .Zero(zero),            //来自执行单元
+        //.Jrn(jrn),              // 来自控制单元
+        //.Zero(zero),            //来自执行单元
         //output
         .Instruction(instruction),  // 输出指令到其他模块
         .PC_plus_4_out(pc_plus_4),  // (pc+4)送执行单元        

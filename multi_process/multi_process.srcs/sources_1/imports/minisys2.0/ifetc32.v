@@ -25,6 +25,7 @@ module Ifetc32(Instruction,PC_plus_4_out,Add_result,Read_data_1,Jmp,Jal,clock,re
     input Wir;
     wire[31:0] ins;
     
+    reg[31:0] IR;
     always@(negedge clock) begin 
         if(reset)begin 
             IR<=0;

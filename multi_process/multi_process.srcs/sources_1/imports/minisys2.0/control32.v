@@ -34,13 +34,13 @@ module control32(Opcode,Jrn,Function_opcode,Alu_resultHigh,RegDST,ALUSrc,
     input clock;
     input reset;
     input zero;
-    output Wpc; //需要修改 PC 值的写信号 
+    output[1:0] Wpc; //需要修改 PC 值的写信号 
     output Wir; //需要写 IR 的信号 
     output Waluresult; //写 Aluresult 的信号
     
     reg[2:0] state;
     reg[2:0] next_state;
-    parameter[2:0] sint = 3'b000,
+    parameter[2:0] sinit = 3'b000,
         sif = 3'b001,
         sid = 3'b010,
         sexe = 3'b011,
@@ -86,7 +86,8 @@ module control32(Opcode,Jrn,Function_opcode,Alu_resultHigh,RegDST,ALUSrc,
     
     
     assign Wir = (state == sif);
-    assign Wpc = (state == sif) || ((state == sid) && (Jrn || Jmp || Jal)) || ((state == sexe) && (Branch || nBranch)) ? 1'b1 : 1'b0;
+    assign Wpc=(state == sif && Opcode!= 6'b111111)? 2'b01:(state == sid)?2'b10:2'b11;
+    //assign Wpc = (state == sif) || ((state == sid) && (Jrn || Jmp || Jal)) || ((state == sexe) && (Branch || nBranch)) ? 1'b1 : 1'b0;
     assign Walueresult = (state == sexe);
     
     
@@ -127,7 +128,7 @@ module control32(Opcode,Jrn,Function_opcode,Alu_resultHigh,RegDST,ALUSrc,
             swb:begin 
                 next_state = sif; end
             default: begin 
-                next_state = sint; end
+                next_state = sinit; end
         endcase
     end
         
